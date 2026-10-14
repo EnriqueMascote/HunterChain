@@ -18,6 +18,8 @@ Cada ADR documenta una decisión relevante. Estados válidos: **Aceptado**, **Pr
 | [0012](ADR-0012.md) | Repositorio público, AGPLv3 y secretos | Aceptado |
 | [0013](ADR-0013.md) | Ensayos adversariales en redes desechables | Aceptado |
 | [0014](ADR-0014.md) | Perfil de forks/génesis y entrada real al staking | Propuesto; prueba bloqueante |
+| [0015](ADR-0015.md) | Wallet ligera si el equipo no soporta Besu+Teku | Aceptado, recursos por medir |
+| [0016](ADR-0016.md) | Piloto Kurtosis desechable y despliegue persistente separado | Aceptado, piloto no ejecutado |
 
 ## Flujo de decisión
 
