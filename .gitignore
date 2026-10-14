@@ -1,0 +1,35 @@
+# Local runtime and private material
+.env
+.env.*
+!.env.example
+**/jwtsecret.hex
+**/secrets/
+**/private/
+**/validator-keys/
+**/node-data/
+**/beacon-data/
+**/chaindata/
+**/root_ca_key
+**/intermediate_ca_key
+**/*.p12
+**/*.pfx
+**/*.key
+**/*mnemonic*
+**/*seed*
+**/participants-private.*
+
+# Runtime and build outputs
+**/data/
+**/logs/
+**/volumes/
+node_modules/
+target/
+build/
+dist/
+.gradle/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Warning: .gitignore cannot replace a staged-content and secrets audit.
