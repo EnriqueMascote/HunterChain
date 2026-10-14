@@ -1,0 +1,22 @@
+# HunterChain G0 — ephemeral Proof-of-Stake interoperability pilot.
+# Deliberately NOT HunterChain production genesis / HNT supply.
+# Reference: https://github.com/ethpandaops/ethereum-package
+# IMPORTANT: No personal validator secrets are stored in this file.
+participants:
+  - el_type: besu
+    cl_type: teku
+    count: 7
+    validator_count: 1
+
+network_params:
+  network: kurtosis
+  network_id: "717071"
+  seconds_per_slot: 12
+  num_validator_keys_per_node: 1
+  preregistered_validator_count: 7
+  genesis_delay: 120
+
+# Wait for the network to initialize; use probe.py to measure finalization.
+wait_for_finalization: false
+# Disposable pilot: ethereum-package documents no Besu/Teku Docker persistence.
+persistent: false
