@@ -1,0 +1,27 @@
+name: G0 static checks
+on:
+  push:
+    paths:
+      - 'devnet/g0/**'
+      - '.github/workflows/g0-static.yml'
+  pull_request:
+    paths:
+      - 'devnet/g0/**'
+      - '.github/workflows/g0-static.yml'
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install YAML validator
+        run: python -m pip install 'PyYAML>=6.0,<7.0'
+      - name: Python syntax check
+        run: python -m py_compile devnet/g0/probe.py
+      - name: Check G0 network parameters
+        run: python -m unittest discover -s devnet/g0/tests -v
